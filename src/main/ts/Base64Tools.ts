@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-/// <reference path="../../typings/tsd.d.ts" />
 
-export = Base64Tools;
-class Base64Tools {
+export class Base64Tools {
 
   private static BASE64_PADDING:string = '===';
 

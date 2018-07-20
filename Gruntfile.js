@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             dest: 'build/node',
             options: {
               module: 'commonjs',
-              target: 'es5',
+              target: 'es6',
               rootDir : 'src/main/ts/',
               sourceMap: false,
               declaration: true
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             dest: 'build/node',
             options: {
               module: 'commonjs',
-              target: 'es5',
+              target: 'es6',
               rootDir : 'src',
               sourceMap: true,
               declaration: true

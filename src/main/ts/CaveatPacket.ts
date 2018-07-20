@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-import CaveatPacketType = require('./CaveatPacketType');
-import MacaroonsConstants = require('./MacaroonsConstants');
-import Base64Tools = require('./Base64Tools');
+import { CaveatPacketType } from './CaveatPacketType';
+import { MacaroonsConstants } from './MacaroonsConstants';
+import { Base64Tools }  from './Base64Tools';
 
-export = CaveatPacket;
-class CaveatPacket {
+export class CaveatPacket {
 
   public type:CaveatPacketType;
   public rawValue:Buffer;

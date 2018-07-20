@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-export = ThirdPartyPacket;
-class ThirdPartyPacket {
+export class ThirdPartyPacket {
 
   public  signature:Buffer;
   public  vid_data:Buffer;

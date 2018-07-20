@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-import Macaroon = require('./Macaroon');
-import CaveatPacket = require('./CaveatPacket');
-import CaveatPacketType = require('./CaveatPacketType');
-import MacaroonsConstants = require('./MacaroonsConstants');
-import Base64Tools = require('./Base64Tools');
+import { Macaroon,
+  CaveatPacket,
+  CaveatPacketType,
+  MacaroonsConstants,
+  Base64Tools } from '.';
 
-export = MacaroonsDeSerializer;
-class MacaroonsDeSerializer {
+export class MacaroonsDeSerializer {
 
   public static deserialize(serializedMacaroon:string):Macaroon {
     var data = new Buffer(Base64Tools.transformBase64UrlSafe2Base64(serializedMacaroon), 'base64');

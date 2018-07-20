@@ -14,21 +14,18 @@
  * limitations under the License.
  */
 
-/// <reference path="../../typings/tsd.d.ts" />
-
-import CaveatPacket = require('./CaveatPacket');
-import CaveatPacketType = require('./CaveatPacketType');
-import Macaroon = require('./Macaroon');
-import MacaroonsConstants = require('./MacaroonsConstants');
-import MacaroonsDeSerializer = require('./MacaroonsDeSerializer');
-import CryptoTools = require('./CryptoTools');
-
-export = MacaroonsBuilder;
+import { CaveatPacket, 
+  CaveatPacketType,
+  Macaroon,
+  MacaroonsConstants,
+  MacaroonsDeSerializer,
+  CryptoTools
+  } from '.';
 
 /**
  * Used to build and modify Macaroons
  */
-class MacaroonsBuilder {
+export class MacaroonsBuilder {
 
   "use strict";
 
@@ -52,10 +49,13 @@ class MacaroonsBuilder {
   constructor(macaroon:Macaroon);
   constructor(arg1:any, secretKey?:any, identifier?:string) {
     if (typeof arg1 === 'string') {
-      if (typeof secretKey !== 'string' && !(secretKey instanceof Buffer)) {
+      if (typeof secretKey === 'string') {
+        this.macaroon = this.computeMacaroon(arg1, secretKey, identifier);
+      } else if (secretKey instanceof Buffer) {
+        this.macaroon = this.computeMacaroon(arg1, secretKey, identifier);
+      } else {
         throw new Error("The secret key has to be a simple string or an instance of Buffer.");
       }
-      this.macaroon = this.computeMacaroon(arg1, secretKey, identifier);
     } else {
       this.macaroon = arg1;
     }

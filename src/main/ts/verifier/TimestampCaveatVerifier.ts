@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-export = TimestampCaveatVerifier;
-
 /**
  * <p>
  * A verifier that is able to verify timestamps against current time.
@@ -60,7 +58,7 @@ export = TimestampCaveatVerifier;
 var CAVEAT_PREFIX = /time < .*/;
 var CAVEAT_PREFIX_LEN = "time < ".length;
 
-function TimestampCaveatVerifier(caveat:string):boolean {
+export function TimestampCaveatVerifier(caveat:string):boolean {
   if (CAVEAT_PREFIX.test(caveat)) {
     var parsedTimestamp = new Date(caveat.substr(CAVEAT_PREFIX_LEN).trim());
     var time = parsedTimestamp.getTime();

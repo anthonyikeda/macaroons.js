@@ -14,18 +14,14 @@
  * limitations under the License.
  */
 
-/// <reference path="../../typings/tsd.d.ts" />
-
 declare var require; // TODO: bad hack to make TSC compile, possible reason https://github.com/Microsoft/TypeScript/issues/954
 var crypto = require('crypto');
 var nacl:any = require('ecma-nacl');
 var toBuffer:any = require('typedarray-to-buffer');
 
-import MacaroonsConstants = require('./MacaroonsConstants');
-import ThirdPartyPacket = require('./ThirdPartyPacket');
+import { MacaroonsConstants, ThirdPartyPacket } from '.';
 
-export = CryptoTools;
-class CryptoTools {
+export class CryptoTools {
 
   public static generate_derived_key(variableKey:string):Buffer {
     var MACAROONS_MAGIC_KEY = "macaroons-key-generator";

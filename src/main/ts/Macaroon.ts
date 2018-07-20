@@ -13,12 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export = Macaroon;
 
-import CaveatPacket = require('./CaveatPacket');
-import CaveatPacketType = require('./CaveatPacketType');
-import MacaroonsSerializer = require('./MacaroonsSerializer');
-import MacaroonsConstants = require('./MacaroonsConstants');
+import { CaveatPacket } from  './CaveatPacket';
+import { CaveatPacketType } from './CaveatPacketType';
+import { MacaroonsSerializer } from './MacaroonsSerializer';
+import { MacaroonsConstants }  from './MacaroonsConstants';
 
 /**
  * <p>
@@ -30,7 +29,7 @@ import MacaroonsConstants = require('./MacaroonsConstants');
  *
  * @see <a href="http://research.google.com/pubs/pub41892.html">http://research.google.com/pubs/pub41892.html</a>
  */
-class Macaroon {
+export class Macaroon {
 
   public location:string;
   public identifier:string;

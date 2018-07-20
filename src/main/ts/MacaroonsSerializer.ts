@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-/// <reference path="../../typings/tsd.d.ts" />
+import { Macaroon } from './Macaroon';
+import { CaveatPacket } from './CaveatPacket';
+import { CaveatPacketType }  from './CaveatPacketType';
+import { MacaroonsConstants } from './MacaroonsConstants';
+import { Base64Tools } from './Base64Tools';
 
-import Macaroon = require('./Macaroon');
-import CaveatPacket = require('./CaveatPacket');
-import CaveatPacketType = require('./CaveatPacketType');
-import MacaroonsConstants = require('./MacaroonsConstants');
-import Base64Tools = require('./Base64Tools');
-
-export = MacaroonsSerializer;
-class MacaroonsSerializer {
+export class MacaroonsSerializer {
 
   "use strict";
 

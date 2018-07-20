@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-export = MacaroonsConstants;
-
-class MacaroonsConstants {
+export class MacaroonsConstants {
   /* public constants ... copied from libmacaroons */
 
   /**

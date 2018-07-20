@@ -14,10 +14,7 @@
  * limitations under the License.
  */
 
-/// <reference path="../../typings/tsd.d.ts" />
-
-export = BufferTools;
-class BufferTools {
+export class BufferTools {
 
   public static equals(a:Buffer, b:Buffer):boolean {
     if (!Buffer.isBuffer(a)) return undefined;

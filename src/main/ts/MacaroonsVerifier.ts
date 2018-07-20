@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 
-/// <reference path="../../typings/tsd.d.ts" />
-
-import CaveatPacket = require('./CaveatPacket');
-import CaveatPacketType = require('./CaveatPacketType');
-import Macaroon = require('./Macaroon');
-import MacaroonsConstants = require('./MacaroonsConstants');
-import BufferTools = require('./BufferTools');
-import MacaroonsDeSerializer = require('./MacaroonsDeSerializer');
-import CryptoTools = require('./CryptoTools');
-
-export = MacaroonsVerifier;
+import { CaveatPacket,
+  CaveatPacketType,
+  Macaroon,
+  MacaroonsConstants,
+  BufferTools,
+  MacaroonsDeSerializer,
+  CryptoTools } from '.';
 
 /**
  * Used to verify Macaroons
  */
-class MacaroonsVerifier {
+export class MacaroonsVerifier {
 
   "use strict";
 
